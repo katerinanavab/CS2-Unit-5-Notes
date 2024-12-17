@@ -36,6 +36,11 @@ public class Main {
       kinder.setEmail("James.Walter2037@gbwl.org");
       System.out.println(kinder);
       // note that didn't need to setGradYear because the DEFAULT CONSTRUCTOR gave an appropriate value for this already (we chose 2037 as the default)
-
+      
+      // Use the Object class' equals() method
+      // Checks the values of each instance variable
+      // junior is the CALLING OBJECT, kinder is the ARGUMENT
+      boolean isEqual = junior.equals(kinder);
+      
    }
 }
