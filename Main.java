@@ -42,5 +42,10 @@ public class Main {
       // junior is the CALLING OBJECT, kinder is the ARGUMENT
       boolean isEqual = junior.equals(kinder);
       
+      // CALL our custom behavior methods
+      // Example: no output, no input
+      junior.complain();
+      // Example: no output, NEEDS input
+      junior.doHomework(8);
    }
 }
