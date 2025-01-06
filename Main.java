@@ -47,5 +47,11 @@ public class Main {
       junior.complain();
       // Example: no output, NEEDS input
       junior.doHomework(8);
+
+
+      // Testing the Student class documentation
+      StudentDocs test = new StudentDocs()
+
+
    }
 }
