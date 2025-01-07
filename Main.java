@@ -50,7 +50,11 @@ public class Main {
 
 
       // Testing the Student class documentation
-      StudentDocs test = new StudentDocs()
+      // HOVER over the words to view the docs we wrote!
+      StudentDocs test = new StudentDocs("Roaree", "Lion", 2025);
+      test.getEmail();
+      test.setGradYear(2026);
+      test.doHomework(10);
 
 
    }
