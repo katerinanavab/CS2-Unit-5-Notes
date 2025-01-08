@@ -7,10 +7,18 @@ public class Student {
     // 1. INSTANCE VARIABLES (attributes/data/fields)
     // think of what this object "needs to know"
     // must be PRIVATE ("encapsulation")
-    private String firstName; // "a Student has a first name"
+    private String firstName; 
     private String lastName;
     private int gradYear; 
     private String email;
+    // STATIC variables for data that should only have ONE COPY for an entire CLASS
+    private static int currentYear = 2025;
+    private static String schoolName = "BWL";
+    private static int studentCount = 0; // COUNTER!!!
+    // static does NOT mean unchanging/constant here:
+    // instead, the keyword FINAL would be used
+
+
 
     // 2. CONSTRUCTORS (manuals for setting up an object)
 
@@ -22,6 +30,8 @@ public class Student {
         lastName = "Last";
         gradYear = 2037; 
         email = firstName + "." + lastName + gradYear + "@gbwl.org";
+        // increment the student object counter static variable
+        studentCount++;
     }
 
     // Constructor with PARAMETERS (user provided key data)
@@ -33,6 +43,7 @@ public class Student {
         lastName = initLastName;
         gradYear = initGradYear;
         email = firstName + "." + lastName + gradYear + "@gbwl.org";
+        studentCount++;
     }
 
     // 3. METHODS (behaviors associated w/the object type)
@@ -90,6 +101,11 @@ public class Student {
         System.out.println("Done with homework!");
     }
 
-    
+    // Example: interact with a static variable
+    // METHODS can also be STATIC - meaning that the behavior/action
+    // is associated with the entire CLASS rather than one object
+    public static void printObjectCount() {
+        System.out.println(studentCount);
+    }
 
 }
