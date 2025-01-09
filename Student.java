@@ -26,11 +26,13 @@ public class Student {
     // "no-argument" constructor
     // Job: initialize instance variables to DEFAULT values
     public Student() {
-        firstName = "First";
-        lastName = "Last";
-        gradYear = 2037; 
-        email = firstName + "." + lastName + gradYear + "@gbwl.org";
-        // increment the student object counter static variable
+        this.firstName = "First";
+        this.lastName = "Last";
+        this.gradYear = 2037; 
+        this.email = firstName + "." + lastName + gradYear + "@gbwl.org";
+
+        // increment the student object counter (STATIC variable)
+        // do not use this.studentCount!! it is data belonging to the CLASS, not an object instance 
         studentCount++;
     }
 
@@ -38,11 +40,12 @@ public class Student {
     // Job: initialize instance variables to PROVIDED values
     // ORDER OF PARAMETERS IS IMPORTANT!!! (the data types)
     // "initFirstName", etc. are like PLACEHOLDERS for real values
-    public Student(String initFirstName, String initLastName, int initGradYear) {
-        firstName = initFirstName; 
-        lastName = initLastName;
-        gradYear = initGradYear;
-        email = firstName + "." + lastName + gradYear + "@gbwl.org";
+    public Student(String firstName, String lastName, int gradYear) {
+        // THIS keyword indicates CURRENT CALLING OBJECT
+        this.firstName = firstName; 
+        this.lastName = lastName;
+        this.gradYear = gradYear;
+        this.email = firstName + "." + lastName + gradYear + "@gbwl.org";
         studentCount++;
     }
 
